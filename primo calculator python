@@ -19,7 +19,7 @@ else:
 
 daily_nowelkin=days_2*60
 total_1=daily+daily_nowelkin
-tot_1=daily_nowelkin/160
+tot_1=total_1/160
 total_fates=total+tot_1
 guaranteed=int(input("are you on 50/50? if yes type 1 else type 0 "))
 if guaranteed==1:
