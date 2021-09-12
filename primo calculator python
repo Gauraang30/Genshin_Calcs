@@ -1,8 +1,8 @@
-print("Character Name : Raiden Shogun ")
-print("Character Gnosis : Electro")
-print("Character Weapon : Polearm")
-print("Character Gender : Female")
-print("Character Region : Inazuma")
+char_name=input("enter character name: ")
+char_element=input("enter character element: ")
+char_weapon=input("enter character weapon: ")
+char_gender=input("enter character gender: ")
+char_region=input("enter character region: ")
 current_pity=int(input("enter current pity "))
 primos=int(input("enter current primogem amt "))
 wishes=int(input("enter current no of wishes "))
@@ -27,11 +27,16 @@ if guaranteed==1:
 else:
     no=90-total_fates
 tot_primos=no*160
+print("Character Name : ",char_name)
+print("Character Element : ",char_element)
+print("Character Weapon : ",char_weapon)
+print("Character Gender : ",char_gender)
+print("Character Region : ",char_region)
 if no<=0:
     print("the reqd fates are 0")
     print("the reqd primos are 0")
-    print("you'll get Raiden easily")
+    print("you'll get",char_name,"easily")
 else:
     print("the reqd fates are",no)
     print("the reqd primos are",tot_primos)
-    print("you'll need to farm for Raiden")
+    print("you'll need to farm for",char_name)
