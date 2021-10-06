@@ -19,7 +19,23 @@ print("your edmg is",edmg_2)
 edmg_3=(edmg_2+100)/100
 burst_dmg_2=(burst_dmg_1+100)/100
 print("your burst dmg is maybe(if the e multiplier counts)",burst_dmg_1)
-attack=int(input("enter your attack "))
+b_attack=int(input("enter your base attack "))
+atk_percent=float(input("enter your attack percentage "))
+flat_atk=int(input("enter your flat attack from artis "))
+atk_percent_1=0.01*atk_percent+1
+tot_atk_1=(b_attack*atk_percent_1)+flat_atk
+bennett=float(input("if you have bennett enter 1 else enter anything else "))
+if bennett==1:
+    atk_benny=float(input("enter benny base atk "))  
+    benny_1=float(input("enter bennett atk transfer percentage "))
+    benny_2=0.01*benny_1+1
+    constellation=float(input("if you have bennett c1 enter 1 else enter anything else "))  
+    if constellation==1:
+        benny_3=benny_2+0.2
+    else:
+        benny_3=benny_2
+    atk=(atk_benny)*benny_3 
+attack=tot_atk_1+atk
 cdmg=float(input("enter your cdmg "))
 cdmg_1=(cdmg+100)/100
 stacks=int(input("enter no of stacks "))
