@@ -47,10 +47,14 @@ hit_3=(0.96+(0.0131*stacks))*burst_dmg_2*dmg
 hit_4=(1.104+(0.0131*stacks))*burst_dmg_2*dmg
 hit_5=(1.319+(0.0131*stacks))*burst_dmg_2*dmg
 charged=(2.426+(0.0131*stacks))*burst_dmg_2*dmg
-res_reduced=0.4
-x=0.1-res_reduced
-y=abs (x/2)
-res_reduced_1=1-y
+if kazuha==1:
+    res_reduced=0.4
+    x=0.1-res_reduced
+    y=abs (x/2)
+    res_reduced_1=1-y
+else:
+    res_reduced=0
+    res_reduced_1=1.1
 base_musou_1=base_musou/res_reduced_1
 hit_1_1=hit_1/res_reduced_1
 hit_2_1=hit_2/res_reduced_1
