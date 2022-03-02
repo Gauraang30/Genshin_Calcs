@@ -1,0 +1,19 @@
+ayaka_atk=2006
+skill_multiplier_1=1.91
+skill_multiplier_2=2.86
+shenhe_atk=3460
+#shenhe_atk=2861
+shenhe_dmg=0.8218
+#shenhe_dmg=0.685
+shenhe_transfer=shenhe_atk*shenhe_dmg
+ayaka_dmg_1=(((skill_multiplier_1*ayaka_atk+shenhe_transfer)*2.4792)*3.143)*5
+ayaka_dmg_2=(((skill_multiplier_1*ayaka_atk)*2.4792)*3.143)*14
+ayaka_dmg_3=((skill_multiplier_2*ayaka_atk)*2.4792)*3.143
+dmg=ayaka_dmg_1+ayaka_dmg_2+ayaka_dmg_3
+res_reduced=0.55
+x=0.1-res_reduced
+y=abs (x/2)
+res_reduced_1=1-y
+dmg_1=dmg/res_reduced_1
+dmg_final=dmg_1/2
+print(dmg_final)
